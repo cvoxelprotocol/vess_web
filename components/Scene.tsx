@@ -6,7 +6,7 @@ import Voxel from "./model/voxel";
 import Sea from "./model/Sea";
 import { useTransition, useSpring, animated, config } from "react-spring";
 import TextTransition from "./model/TextTransition";
-import { Transform } from "stream";
+import Sky from "./model/Sky";
 
 softShadows();
 const Scene: FC = () => {
@@ -46,6 +46,7 @@ const Scene: FC = () => {
           castShadow
         />
         <pointLight position={[20, 30, 30]} intensity={1} />
+        <Sky />
         <Sea />
         <Voxel />
         <group>
