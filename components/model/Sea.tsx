@@ -39,7 +39,7 @@ const Sea: FC = () => {
       </mesh>
       <mesh
         rotation={[-0.46 * Math.PI, 0, 0]}
-        scale={[1000, 60, 10]}
+        scale={[1000, 80, 10]}
         receiveShadow
       >
         <planeBufferGeometry />
