@@ -1,9 +1,8 @@
 import { ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import Scene from "components/Scene";
+import Scene from "@/components/Scene";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import Header from "../components/layout/Header";
 
 const Home: NextPage = () => {

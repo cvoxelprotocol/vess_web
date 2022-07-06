@@ -1,14 +1,13 @@
-import React from "react";
-import { FC, useState } from "react";
-import { useTransition, animated, a, config } from "react-spring";
+import { FC, useState, ReactNode, Children } from "react";
+import { useTransition, animated } from "react-spring";
 
 type Props = {
-  children?: React.ReactNode;
+  children?: ReactNode;
 };
 
 const TextTransition: FC<Props> = ({ children }) => {
   const [index, setIndex] = useState(0);
-  const items = React.Children.toArray(children);
+  const items = Children.toArray(children);
   console.log(items.length);
   console.log("index: " + index);
   const trans = useTransition(index, {

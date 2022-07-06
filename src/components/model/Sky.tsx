@@ -1,6 +1,6 @@
 import { useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { FC, useRef, useState } from "react";
+import { FC, useRef } from "react";
 import * as THREE from "three";
 
 const Sky: FC = () => {
