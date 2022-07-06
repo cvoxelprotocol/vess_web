@@ -1,4 +1,4 @@
-import { FC, useRef, useState } from "react";
+import { Dispatch, FC, SetStateAction, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { softShadows, useScroll, Html } from "@react-three/drei";
 import { deg2rad } from "lib/utility";
@@ -7,20 +7,33 @@ import Sea from "./model/Sea";
 import { useTransition, useSpring, animated, config } from "react-spring";
 import TextTransition from "./model/TextTransition";
 import Sky from "./model/Sky";
+import { useRecoilState } from "recoil";
+import { isScrollFin } from "../recoilState/scene";
+
+type Props = {
+  setter: Dispatch<SetStateAction<boolean>>;
+};
 
 softShadows();
-const Scene: FC = () => {
+const Scene: FC<Props> = ({ setter }) => {
   const camera = useRef<THREE.PerspectiveCamera>(null);
   const [v1, setV1] = useState(true);
   const [v2, setV2] = useState(true);
   const [show, setShow] = useState(true);
+  //const [_, setIsScrollEnd] = useRecoilState(isScrollFin);
 
   /* For Three-Fiber */
   const scroll = useScroll();
   useFrame(() => {
     const p1 = scroll.range(0 / 5, 1 / 5);
+    const p5 = scroll.range(3 / 5, 4 / 5);
     setV1(scroll.visible(0 / 5, 0 / 5, 0.02));
     setV2(scroll.visible(0 / 5, 1 / 5));
+    if (p5 > 0.18) {
+      setter(true);
+    } else {
+      setter(false);
+    }
     camera.current!.position.z = -10 + -15 * (1 - p1);
     camera.current!.position.x = -7 * p1;
     camera.current!.position.y = -2 * p1 - 5;
@@ -28,7 +41,6 @@ const Scene: FC = () => {
   });
 
   const p1Styles = useSpring({ opacity: v1 ? 1 : 0 });
-  console.log("v1: ", v1);
 
   return (
     <>
@@ -61,13 +73,13 @@ const Scene: FC = () => {
                     </span>
                   </h1>
                   <h1 className="text-[56px] text-on-primary-container font-sans-alt font-light">
-                    Visualize your work as like{" "}
+                    Visualize your work as{" "}
                     <span className="ml-2 px-4 font-bold text-on-primary rounded-lg bg-primary">
                       Colorful Voxels{" "}
                     </span>
                   </h1>
                   <h1 className="text-[56px] text-on-primary-container font-sans-alt font-light">
-                    Share Voxels. They're{" "}
+                    Share your Voxels. Theyre{" "}
                     <span className="ml-2 px-4 font-bold text-on-primary rounded-lg bg-primary">
                       Your web3 CV{" "}
                     </span>
