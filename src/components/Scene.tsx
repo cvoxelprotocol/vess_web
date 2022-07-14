@@ -1,10 +1,10 @@
 import { Dispatch, FC, SetStateAction, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { softShadows, useScroll, Html } from "@react-three/drei";
-import { deg2rad } from "lib/utility";
+import { deg2rad } from "@/lib/utility";
 import Voxel from "./model/voxel";
 import Sea from "./model/Sea";
-import { useTransition, useSpring, animated, config } from "react-spring";
+import { useSpring, animated } from "react-spring";
 import TextTransition from "./model/TextTransition";
 import Sky from "./model/Sky";
 import { useRecoilState } from "recoil";

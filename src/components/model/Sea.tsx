@@ -2,12 +2,6 @@ import { GradientTexture, useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { FC, useRef, useState } from "react";
 import * as THREE from "three";
-import {
-  AdditiveBlending,
-  Blending,
-  MultiplyBlending,
-  SubtractiveBlending,
-} from "three";
 
 const Sea: FC = () => {
   const [frameNum, setFrameNum] = useState(0);
