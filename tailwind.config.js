@@ -16,12 +16,16 @@ module.exports = {
         "on-primary": "#FFFFFF",
         "on-primary-container": "#320046",
         "background": "#FCFCFC",
+        "on-background": "#1E1A1E",
         "primary/depth1": "#58468A",
         "primary/surface1": "#9A00CD",
-        "outline": "#7E747E"
+        "outline": "#7E747E",
+        "skyblue": "#6FD2FD",
+        "oceanblue": "#8E92F3",
+        "waterpurple": "#CA8AFF"
 
       }
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }

@@ -15,9 +15,43 @@ const Header: FC = () => {
           />
         </div>
         <div className="flex justify-self-end items-center">
-          <Button variant="text">Discord</Button>
-          <Button variant="text">Github</Button>
-          <Button variant="text">Docs</Button>
+          <div className=" dropdown dropdown-hover">
+            <Button variant="text">Ecosystem ▼</Button>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a>Being developed</a>
+              </li>
+            </ul>
+          </div>
+          <div className=" dropdown dropdown-hover">
+            <Button variant="text">Community ▼</Button>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a>Discord</a>
+              </li>
+              <li>
+                <a>Twitter</a>
+              </li>
+            </ul>
+          </div>
+          <div className=" dropdown dropdown-hover">
+            <Button variant="text">Resources ▼</Button>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a>Whitepaper</a>
+                <a>Github</a>
+              </li>
+            </ul>
+          </div>
           <div className="w-4"></div>
           <Button> Go to App </Button>
         </div>

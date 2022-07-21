@@ -8,7 +8,6 @@ import { useSpring, animated } from "react-spring";
 import TextTransition from "./model/TextTransition";
 import Sky from "./model/Sky";
 import { useRecoilState } from "recoil";
-import { isScrollFin } from "../recoilState/scene";
 
 type Props = {
   setter: Dispatch<SetStateAction<boolean>>;
@@ -79,7 +78,7 @@ const Scene: FC<Props> = ({ setter }) => {
                     </span>
                   </h1>
                   <h1 className="text-[56px] text-on-primary-container font-sans-alt font-light">
-                    Share your Voxels. Theyre{" "}
+                    Share your Voxels. They're{" "}
                     <span className="ml-2 px-4 font-bold text-on-primary rounded-lg bg-primary">
                       Your web3 CV{" "}
                     </span>
