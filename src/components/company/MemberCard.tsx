@@ -1,0 +1,58 @@
+import { FC, ReactNode } from "react";
+import Image from "next/image";
+
+type Props = {
+  roles: string[];
+  src?: string;
+  name: string;
+  children?: ReactNode;
+};
+
+const MemberCard: FC<Props> = ({ roles, src, name, children }) => {
+  return (
+    <div className="flex flex-none flex-col justify-between mx-8 pt-8 pb-6 px-5 w-72 h-96 rounded-3xl border border-outline bg-primary/5 ">
+      <div className="flex flex-col items-center  h-96 ">
+        {src ? (
+          <div className="relative w-16, h-16 rounded-full">
+            <Image src={src} layout="fill" objectFit="cover" />
+          </div>
+        ) : (
+          <div className="w-16 h-16 rounded-full bg-slate-300"></div>
+        )}
+        <h4 className=" mt-4 font-normal text-2xl text-on-primary-container">
+          {name}
+        </h4>
+        <div className="mt-1 flex">
+          {roles.map((role) => (
+            <div className="mx-1 px-2 py-[2px] border border-primary bg-primary-container rounded-full text-xs ">
+              {" "}
+              {role}{" "}
+            </div>
+          ))}
+        </div>
+        <div className="w-full mt-4 px-1 py-3 border-t border-outline text-on-primary-container">
+          {children}
+        </div>
+      </div>
+      <div className="flex items-center">
+        <div className="mx-2">
+          <a href="https://twitter.com">
+            <Image src="/icons/twitter.svg" width="20px" height="24px" />
+          </a>
+        </div>
+        <div className="mx-2">
+          <a href="https://twitter.com">
+            <Image src="/icons/github.svg" width="24px" height="24px" />
+          </a>
+        </div>
+        <div className="mx-2">
+          <a href="https://twitter.com">
+            <Image src="/icons/vess.svg" width="24px" height="26px" />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MemberCard;
