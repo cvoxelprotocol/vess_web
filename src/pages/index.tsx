@@ -10,11 +10,21 @@ import { RecoilRoot, useRecoilValue } from "recoil";
 import { Suspense, useState } from "react";
 import Button from "@/components/common/Button";
 import Image from "next/image";
+import BenefitCard from "@/components/common/BenefitCard";
+import { useInView } from "react-intersection-observer";
+import VessLine from "@/components/common/VessLine";
+import Footer from "@/components/layout/Footer";
+import { url } from "inspector";
 
 const Home: NextPage = () => {
   const [isScrollEnd, setIsScrollEnd] = useState(false);
+  const [benefitRef, benefitInView] = useInView({
+    rootMargin: "-50px",
+    triggerOnce: true,
+  });
+
   return (
-    <div>
+    <div className="bg-background">
       <Head>
         <title>VESS</title>
         <meta name="description" content="VESS Landing Page" />
@@ -28,78 +38,148 @@ const Home: NextPage = () => {
 
       <main>
         <div className="h-screen w-full">
-          {/* <Suspense fallback="now loading">
-            <Canvas shadows>
-              <ScrollControls pages={0}>
-                <Scene setter={setIsScrollEnd} />
-              </ScrollControls>
-            </Canvas>
-          </Suspense> */}
+          <Canvas shadows>
+            <ScrollControls pages={0}>
+              <Scene setter={setIsScrollEnd} />
+            </ScrollControls>
+          </Canvas>
         </div>
-        {true && (
-          <div className="flex flex-col items-center justify-center w-full px-14 bg-background">
-            <div className="">
-              <h2 className=" mt-28 text-on-primary-container font-normal text-4xl">
-                Benefits for ...
-              </h2>
-            </div>
-            <h5 className=" w-full max-w-4xl mx-[240px] mt-6 mb-16 font-normal text-xl text-primary/depth1 text-center">
-              Although there are many usecases of VESS protocol. Here, we
-              introduce some main benefits and usecases such for DAO, personal,
-              job marketplace and in general.
-            </h5>
-            {/* Benefits for... */}
-            <div className="mx-20 max-w-4xl w-full grid gap-10 grid-cols-2 grid-rows-2 h-[800px]">
-              <div className=" py-9 px-12 col-span-2 raw-span-1 border border-outline bg-primary/surface1/5 rounded-[32px] ">
-                <h3 className=" font-medium text-4xl text-on-primary-container">
-                  {" "}
-                  General{" "}
-                </h3>
-                <h6 className=" mt-4 text-xl text-primary/depth1">
-                  Although there are many usecases of VESS protocol. Here, we
-                  introduce some main benefits and usecases such for DAO,
-                  personal, job marketplace and in general.
+
+        {/* Benefits for... */}
+        <div className="flex flex-col items-center justify-center w-full px-5 lg:px-14 bg-background">
+          <div className="">
+            <h2 className=" mt-28 text-on-primary-container font-normal text-3xl lg:text-4xl">
+              Benefits of VESS
+            </h2>
+          </div>
+          <h5 className=" w-full max-w-4xl mx-[240px] mt-6 mb-16 font-normal text-lg lg:text-xl text-primary/depth1 text-center">
+            Although there are many usecases of VESS protocol. Here, we
+            introduce some main benefits and usecases such for DAO, personal,
+            job marketplace and in general.
+          </h5>
+
+          <div
+            className="lg:mx-20 max-w-[1024px] w-full flex-col md:grid md:gap-10 md:grid-cols-2 md:grid-rows-2"
+            ref={benefitRef}
+          >
+            {benefitInView && (
+              <>
+                <BenefitCard className=" flex flex-col md:flex-row md:mb-0 mb-6 py-9 px-8 md:px-12 col-span-2 raw-span-1">
+                  <div className="w-full lg:w-80 self-center shrink lg:shrink-0">
+                    <h3 className="mb-2 px-2 font-medium text-xl lg:text-3xl text-on-primary-container">
+                      for Personal
+                    </h3>
+                    <VessLine className="w-full h-1" />
+                    <h6 className=" mt-2 px-2 text-base lg:text-xl text-primary/depth1 leading-relaxed">
+                      Your VESS voxels are your own work history on Web. <br />
+                      You can easily share your voxels to your friends,
+                      colleagues etc... as <strong>your CV</strong>.
+                    </h6>
+                    <a className="block mt-2 py-2 px-2 text-base lg:text-lg text-primary ">
+                      {" "}
+                      ▶︎ Learn More{" "}
+                    </a>
+                  </div>
+                  <div className="relative mt-5 h-40 md:h-auto w-full md:translate-x-20">
+                    <Image
+                      src="/illust_working.png"
+                      layout="fill"
+                      objectFit="contain"
+                    ></Image>
+                  </div>
+                </BenefitCard>
+                <BenefitCard className="md:h-full md:my-0 my-6 py-10 px-8 col-span-1 raw-span-1">
+                  <h3 className="mb-2 px-2 font-medium text-xl lg:text-2xl text-on-primary-container">
+                    for DAO Managers
+                  </h3>
+                  <VessLine className="w-full h-1" />
+                  <h6 className=" mt-2 px-2 text-base lg:text-xl text-primary/depth1 leading-relaxed">
+                    Have you ever wondered what kind of background a
+                    contributors have? <br />
+                    With VESS, you can list the backgrounds of your community
+                    members to help you recruit them.
+                  </h6>
+                  <a className="block mt-2 py-2 px-2 text-base lg:text-lg text-primary ">
+                    {" "}
+                    ▶︎ Learn More{" "}
+                  </a>
+                </BenefitCard>
+                <BenefitCard className="py-10 px-8 col-span-1 raw-span-1">
+                  <h3 className="mb-2 px-2 font-medium text-xl lg:text-2xl text-on-primary-container">
+                    for Job Marketplace
+                  </h3>
+                  <VessLine className="w-full h-1" />
+                  <h6 className=" mt-2 px-2 text-base lg:text-xl text-primary/depth1 leading-relaxed">
+                    If you are running a job marketplace, you can evolve it into
+                    greater by incorporating VESS. <br />
+                    VESS is working on an SDK and API development for that.
+                  </h6>
+                  <a className="block mt-2 py-2 px-2 text-base lg:text-lg text-primary ">
+                    {" "}
+                    ▶︎ Learn More{" "}
+                  </a>
+                </BenefitCard>
+              </>
+            )}
+          </div>
+        </div>
+
+        {/* Join us */}
+        <div
+          className="flex flex-col items-center mt-16 py-8 w-screen h-[320px] bg-center bg-cover"
+          style={{ backgroundImage: "url(/bg-searoad.png)" }}
+        >
+          <h4 className="block text-4xl text-on-primary-container font-medium">
+            Join us
+          </h4>
+          <div className="flex justify-center md:justify-between items-center mt-12 w-full max-w-5xl">
+            <a className="block mx-6 md:mx-12 w-20 h-24">
+              <div className="hidden md:block">
+                <Image src="/icons/github.svg" width="80px" height="80px" />
+                <h6 className="mx-2 font-medium text-lg text-on-primary-container text-center ">
+                  Github
                 </h6>
-                <Button variant="text">Learn more</Button>
               </div>
-              <div className="col-span-1 raw-span-1 border border-outline bg-primary/surface1/5 rounded-[32px]"></div>
-              <div className="col-span-1 raw-span-1 border border-outline bg-primary/surface1/5 rounded-[32px]"></div>
-            </div>
+              <div className="md:hidden flex flex-col items-center ">
+                <Image src="/icons/github.svg" width="48px" height="48px" />
+                <h6 className="mx-2 mt-2 font-medium text-lg text-on-primary-container text-center ">
+                  Github
+                </h6>
+              </div>
+            </a>
+            <a className="block mx-2 md:mx-12 w-20 h-24">
+              <div className="hidden md:block">
+                <Image src="/icons/discord.svg" width="80px" height="80px" />
+                <h6 className="mx-2 font-medium text-lg text-on-primary-container text-center ">
+                  Discord
+                </h6>
+              </div>
+              <div className="md:hidden flex flex-col items-center">
+                <Image src="/icons/discord.svg" width="48px" height="48px" />
+                <h6 className="mx-2 mt-2 font-medium text-lg text-on-primary-container text-center ">
+                  Discord
+                </h6>
+              </div>
+            </a>
+            <a className="block mx-6 md:mx-12 w-20 h-24">
+              <div className="hidden md:block">
+                <Image src="/icons/twitter.svg" width="80px" height="80px" />
+                <h6 className="mx-2 font-medium text-lg text-on-primary-container text-center ">
+                  Twitter
+                </h6>
+              </div>
+              <div className="md:hidden flex flex-col items-center">
+                <Image src="/icons/twitter.svg" width="48px" height="48px" />
+                <h6 className="mx-2 mt-2 font-medium text-lg text-on-primary-container text-center ">
+                  Twitter
+                </h6>
+              </div>
+            </a>
           </div>
-        )}
+        </div>
       </main>
-      <footer className="lg:grid lg:grid-cols-2 px-16 pt-5 pb-4 content-center w-full mt-16 h-36 bg-primary">
-        <div className="flex items-center">
-          <Image
-            src="/vess_logo_white@2x.png"
-            alt="logo of VESS"
-            width="125px"
-            height="32px"
-          />
-        </div>
-        <div className="flex justify-end font-normal text-lg text-on-primary">
-          <div className="mx-8 ">
-            Ecosystem
-            <ul className=" my-1 ml-2 px-2 pb-1 border-l border-on-primary font-light text-base">
-              <li className="my-1">Being Developed</li>
-            </ul>
-          </div>
-          <div className="mx-8 ">
-            Community
-            <ul className=" my-1 ml-2 px-2 pb-1 border-l border-on-primary font-light text-base">
-              <li className="my-1">Twitter</li>
-              <li>Discord</li>
-            </ul>
-          </div>
-          <div className="mx-8 ">
-            Resources
-            <ul className=" my-1 ml-2 px-2 pb-1 border-l border-on-primary font-light text-base">
-              <li className="my-1">Whitepaper</li>
-              <li>Github</li>
-            </ul>
-          </div>
-        </div>
-      </footer>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

@@ -65,22 +65,22 @@ const Scene: FC<Props> = ({ setter }) => {
             <div className="flex items-center justify-center w-screen ">
               <animated.div style={p1Styles}>
                 <TextTransition>
-                  <h1 className="text-[56px] text-on-primary-container font-sans-alt font-light">
-                    Record your Soulbound{" "}
-                    <span className="ml-2 px-4 font-bold text-on-primary rounded-lg bg-primary">
+                  <h1 className="mx-4 text-left text-[36px] lg:text-[56px] text-on-primary-container font-sans-alt font-light">
+                    Record your Soulbound <br className="md:hidden" />
+                    <span className="md:ml-2 px-4 font-bold text-on-primary rounded-lg bg-primary leading-loose">
                       Work Credentials{" "}
                     </span>
                   </h1>
-                  <h1 className="text-[56px] text-on-primary-container font-sans-alt font-light">
-                    Visualize your work as{" "}
-                    <span className="ml-2 px-4 font-bold text-on-primary rounded-lg bg-primary">
-                      Colorful Voxels{" "}
+                  <h1 className="mx-4 text-[36px] lg:text-[56px] text-on-primary-container font-sans-alt font-light">
+                    Share your Voxels. They're <br className="md:hidden" />
+                    <span className="md:ml-2 px-4 font-bold text-on-primary rounded-lg bg-primary leading-loose">
+                      Your web3 CV{" "}
                     </span>
                   </h1>
-                  <h1 className="text-[56px] text-on-primary-container font-sans-alt font-light">
-                    Share your Voxels. They're{" "}
-                    <span className="ml-2 px-4 font-bold text-on-primary rounded-lg bg-primary">
-                      Your web3 CV{" "}
+                  <h1 className="mx-4 text-[36px] lg:text-[56px] text-on-primary-container font-sans-alt font-light">
+                    Visualize your work as <br className="md:hidden" />
+                    <span className="md:ml-2 px-4 font-bold text-on-primary rounded-lg bg-primary leading-loose">
+                      Colorful Voxels{" "}
                     </span>
                   </h1>
                 </TextTransition>

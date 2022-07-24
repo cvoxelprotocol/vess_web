@@ -1,5 +1,7 @@
 import { FC, ReactNode } from "react";
 import Image from "next/image";
+import Members from "@/contents/members.json";
+import { MemberType } from "@/types";
 
 type Props = {
   roles: string[];
@@ -8,7 +10,15 @@ type Props = {
   children?: ReactNode;
 };
 
-const MemberCard: FC<Props> = ({ roles, src, name, children }) => {
+const MemberCard: FC<MemberType> = ({
+  roles,
+  src,
+  name,
+  description,
+  twitterURL,
+  githubURL,
+  vessURL,
+}) => {
   return (
     <div className="flex flex-none flex-col justify-between mx-8 pt-8 pb-6 px-5 w-72 h-96 rounded-3xl border border-outline bg-primary/5 ">
       <div className="flex flex-col items-center  h-96 ">
@@ -31,22 +41,22 @@ const MemberCard: FC<Props> = ({ roles, src, name, children }) => {
           ))}
         </div>
         <div className="w-full mt-4 px-1 py-3 border-t border-outline text-on-primary-container">
-          {children}
+          {description}
         </div>
       </div>
       <div className="flex items-center">
         <div className="mx-2">
-          <a href="https://twitter.com">
+          <a href={twitterURL}>
             <Image src="/icons/twitter.svg" width="20px" height="24px" />
           </a>
         </div>
         <div className="mx-2">
-          <a href="https://twitter.com">
+          <a href={githubURL}>
             <Image src="/icons/github.svg" width="24px" height="24px" />
           </a>
         </div>
         <div className="mx-2">
-          <a href="https://twitter.com">
+          <a href={vessURL}>
             <Image src="/icons/vess.svg" width="24px" height="26px" />
           </a>
         </div>

@@ -1,0 +1,40 @@
+{
+  "members":[
+    {
+      "name": "Kantaro Fujimori",
+      "src": "",
+      "roles": ["Co-founder", "CEO"],
+      "description": "sample text",
+      "githubURL": "https://github.com/KoukiMinamoto",
+      "twitterURL": "https://twitter.com/KoukiMinamoto",
+      "vessURL": "https://vess.id"
+    },
+    {
+      "name": "Kouki Minamoto",
+      "src": "",
+      "roles": ["Co-founder", "CDO"],
+      "description": "sample text",
+      "githubURL": "https://github.com/KoukiMinamoto",
+      "twitterURL": "https://twitter.com/KoukiMinamoto",
+      "vessURL": "https://vess.id"
+    },
+    {
+      "name": "Kelivn Au",
+      "src": "",
+      "roles": ["Media Strategist"],
+      "description": "sample text",
+      "githubURL": "https://github.com/KoukiMinamoto",
+      "twitterURL": "https://twitter.com/KoukiMinamoto",
+      "vessURL": "https://vess.id"
+    },
+    {
+      "name": "Ibuki Nakajima",
+      "src": "",
+      "roles": ["Full-stack Engineer"],
+      "description": "sample text",
+      "githubURL": "https://github.com/KoukiMinamoto",
+      "twitterURL": "https://twitter.com/KoukiMinamoto",
+      "vessURL": "https://vess.id"
+    }
+  ]
+}

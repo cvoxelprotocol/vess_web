@@ -1,11 +1,12 @@
 import { FC } from "react";
 import Image from "next/image";
 import Button from "@/components/common/Button";
+import Link from "next/link";
 
 const Header: FC = () => {
   return (
     <header>
-      <div className=" fixed h-20 right-0 left-0 z-50 lg:grid lg:grid-cols-2 px-16 pt-5 pb-4 content-center bg-white/50 ">
+      <div className=" fixed h-20 right-0 left-0 z-50 lg:grid lg:grid-cols-3 px-5 lg:px-16 pt-5 pb-4 content-center bg-white/50 backdrop-blur-md">
         <div className="flex items-center">
           <Image
             src="/vess_logo_full@2x.png"
@@ -14,7 +15,7 @@ const Header: FC = () => {
             height="32px"
           />
         </div>
-        <div className="flex justify-self-end items-center">
+        <div className="hidden lg:flex justify-self-end items-center col-span-2">
           <div className=" dropdown dropdown-hover">
             <Button variant="text">Ecosystem ▼</Button>
             <ul
@@ -49,6 +50,7 @@ const Header: FC = () => {
               <li>
                 <a>Whitepaper</a>
                 <a>Github</a>
+                <Link href="/company"> Company </Link>
               </li>
             </ul>
           </div>
