@@ -5,7 +5,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/layout/Header";
 import { isScrollFin } from "recoilState/scene";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { RecoilRoot, useRecoilValue } from "recoil";
 import { Suspense, useState } from "react";
 import Button from "@/components/common/Button";
@@ -15,6 +14,7 @@ import { useInView } from "react-intersection-observer";
 import VessLine from "@/components/common/VessLine";
 import Footer from "@/components/layout/Footer";
 import { url } from "inspector";
+import WrapMenu from "@/components/common/WrapMenu";
 
 const Home: NextPage = () => {
   const [isScrollEnd, setIsScrollEnd] = useState(false);
@@ -24,7 +24,8 @@ const Home: NextPage = () => {
   });
 
   return (
-    <div className="bg-background">
+    <body className="bg-background overflow-hidden">
+      {/* <WrapMenu open /> */}
       <Head>
         <title>VESS</title>
         <meta name="description" content="VESS Landing Page" />
@@ -180,7 +181,7 @@ const Home: NextPage = () => {
       </main>
       {/* Footer */}
       <Footer />
-    </div>
+    </body>
   );
 };
 

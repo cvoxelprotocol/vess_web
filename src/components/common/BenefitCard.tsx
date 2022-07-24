@@ -17,8 +17,7 @@ const BenefitCard: FC<Props> = ({ className, children }) => {
     <animated.div
       style={{ y, opacity }}
       className={
-        "border border-outline bg-primary/surface1/5 rounded-[32px] " +
-        className
+        "border border-outline bg-primary/surface1 rounded-[32px] " + className
       }
     >
       {children}

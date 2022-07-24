@@ -20,10 +20,13 @@ const Header: FC = () => {
             <Button variant="text">Ecosystem ▼</Button>
             <ul
               tabIndex={0}
-              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+              className="dropdown-content menu p-2 bg-primary/surface1 rounded-box w-52 text-on-primary-container"
+              style={{ boxShadow: "0 2px 1px 0 rgb(175 169 173 / 1)" }}
             >
-              <li>
-                <a>Being developed</a>
+              <li className="rounded-none mx-2 my-1 hover:border-b-[1.5px] hover:bg-transparent border-primary/50">
+                <a className="hover:bg-transparent py-2 text-on-primary-container/50">
+                  Being developed
+                </a>
               </li>
             </ul>
           </div>
@@ -31,13 +34,19 @@ const Header: FC = () => {
             <Button variant="text">Community ▼</Button>
             <ul
               tabIndex={0}
-              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+              className="dropdown-content menu p-2 bg-primary/surface1 rounded-box w-52 text-on-primary-container"
+              style={{ boxShadow: "0 2px 1px 0 rgb(175 169 173 / 1)" }}
             >
-              <li>
-                <a>Discord</a>
+              <li className="rounded-none mx-2 my-1 hover:border-b-[1.5px] hover:bg-transparent border-primary">
+                <a
+                  href="https://discord.gg/dAhxxmfc4p"
+                  className="hover:bg-transparent py-2"
+                >
+                  Discord
+                </a>
               </li>
-              <li>
-                <a>Twitter</a>
+              <li className="rounded-none mx-2 my-1 hover:border-b-[1.5px] hover:bg-transparent border-primary">
+                <a className="hover:bg-transparent py-2">Twitter</a>
               </li>
             </ul>
           </div>
@@ -45,12 +54,23 @@ const Header: FC = () => {
             <Button variant="text">Resources ▼</Button>
             <ul
               tabIndex={0}
-              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+              className="dropdown-content menu p-2 bg-primary/surface1 rounded-box w-52 text-on-primary-container"
+              style={{ boxShadow: "0 2px 1px 0 rgb(175 169 173 / 1)" }}
             >
-              <li>
-                <a>Whitepaper</a>
-                <a>Github</a>
-                <Link href="/company"> Company </Link>
+              <li className="rounded-none mx-2 my-1 hover:border-b-[1.5px] hover:bg-transparent border-primary">
+                <a className="hover:bg-transparent py-2">Whitepaper</a>
+              </li>
+              <li className="rounded-none mx-2 my-1 hover:border-b-[1.5px] hover:bg-transparent border-primary">
+                <a className="hover:bg-transparent py-2">Github</a>
+              </li>
+              <li className="rounded-none mx-2 my-1 hover:border-b-[1.5px] hover:bg-transparent border-primary">
+                <Link
+                  href="/company"
+                  className="hover:bg-transparent py-2"
+                  style={{ backgroundColor: "transparent" }}
+                >
+                  Company
+                </Link>
               </li>
             </ul>
           </div>

@@ -62,7 +62,7 @@ const Scene: FC<Props> = ({ setter }) => {
         <Voxel />
         <group>
           <Html position={[0, 7, 0]} center>
-            <div className="flex items-center justify-center w-screen ">
+            <div className="flex relative items-center justify-center w-screen ">
               <animated.div style={p1Styles}>
                 <TextTransition>
                   <h1 className="mx-4 text-left text-[36px] lg:text-[56px] text-on-primary-container font-sans-alt font-light">
