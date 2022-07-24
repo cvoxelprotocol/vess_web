@@ -17,7 +17,7 @@ const Company: NextPage = () => {
   const headerStyle = useRef(
     "z-40 w-[1024px] py-3 fixed grid grid-cols-2 bg-white backdrop-blur-lg"
   );
-  const burgerStyle = useRef("");
+  const burgerStyle = useRef("z-50 md:hidden");
 
   useEffect(() => {
     membersDiv.current!.scrollTo(200, 0);
@@ -62,7 +62,7 @@ const Company: NextPage = () => {
   }, [scrollEvent]);
 
   return (
-    <div className="flex justify-center" id="outer-container">
+    <div className="flex justify-center" id="outer-container bg-on-primary">
       <div className="max-w-[1024px] w-full  bg-on-primary">
         {/* Header */}
         <div className={burgerStyle.current}>
