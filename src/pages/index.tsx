@@ -24,7 +24,7 @@ const Home: NextPage = () => {
   });
 
   return (
-    <body className="bg-background overflow-hidden">
+    <body className="bg-background ">
       {/* <WrapMenu open /> */}
       <Head>
         <title>VESS</title>
