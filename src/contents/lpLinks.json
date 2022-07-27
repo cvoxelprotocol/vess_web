@@ -1,0 +1,43 @@
+{
+  "links":[
+    {
+      "title": "Ecosystem",
+      "listItems": [
+        {
+          "label": "Being developed",
+          "href": ""
+        }
+      ]
+    },
+    {
+      "title": "Community",
+      "listItems": [
+        {
+          "label": "Discord",
+          "href": ""
+        },
+        {
+          "label": "Twitter",
+          "href": ""
+        }
+      ]
+    },
+    {
+      "title": "Resources",
+      "listItems": [
+        {
+          "label": "Whitepaper",
+          "href": ""
+        },
+        {
+          "label": "Github",
+          "href": ""
+        },
+        {
+          "label": "Company",
+          "href": ""
+        }
+      ]
+    }
+  ]
+}

@@ -61,8 +61,8 @@ const Scene: FC<Props> = ({ setter }) => {
         <Sea />
         <Voxel />
         <group>
-          <Html position={[0, 7, 0]} center>
-            <div className="flex relative items-center justify-center w-screen ">
+          <Html position={[0, 7, 0]} center zIndexRange={[0, 0]}>
+            <div className="flex relative z-10 items-center justify-center w-screen ">
               <animated.div style={p1Styles}>
                 <TextTransition>
                   <h1 className="mx-4 text-left text-[36px] lg:text-[56px] text-on-primary-container font-sans-alt font-light">

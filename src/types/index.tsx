@@ -11,3 +11,17 @@ export type MemberType = {
   twitterURL: string;
   vessURL: string;
 };
+
+export type LinksType = {
+  links: LinkType[];
+};
+
+export type LinkType = {
+  title: string;
+  listItems: ListItemType[];
+};
+
+export type ListItemType = {
+  label: string;
+  href: string;
+};

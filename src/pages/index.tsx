@@ -4,8 +4,6 @@ import Scene from "@/components/Scene";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/layout/Header";
-import { isScrollFin } from "recoilState/scene";
-import { RecoilRoot, useRecoilValue } from "recoil";
 import { Suspense, useState } from "react";
 import Button from "@/components/common/Button";
 import Image from "next/image";
@@ -13,8 +11,7 @@ import BenefitCard from "@/components/common/BenefitCard";
 import { useInView } from "react-intersection-observer";
 import VessLine from "@/components/common/VessLine";
 import Footer from "@/components/layout/Footer";
-import { url } from "inspector";
-import WrapMenu from "@/components/common/WrapMenu";
+import MenuLinks from "@/contents/lpLinks.json";
 
 const Home: NextPage = () => {
   const [isScrollEnd, setIsScrollEnd] = useState(false);
@@ -24,10 +21,10 @@ const Home: NextPage = () => {
   });
 
   return (
-    <body className="bg-background ">
-      {/* <WrapMenu open /> */}
+    <div className="bg-background ">
       <Head>
         <title>VESS</title>
+        <link rel="icon" href="/icons/VESS_favicon.ico" />
         <meta name="description" content="VESS Landing Page" />
         <style>
           {
@@ -35,7 +32,7 @@ const Home: NextPage = () => {
           }
         </style>
       </Head>
-      <Header />
+      <Header links={MenuLinks.links} />
 
       <main>
         <div className="h-screen w-full">
@@ -180,8 +177,8 @@ const Home: NextPage = () => {
         </div>
       </main>
       {/* Footer */}
-      <Footer />
-    </body>
+      <Footer links={MenuLinks.links} />
+    </div>
   );
 };
 

@@ -7,7 +7,6 @@ import { useSpring, config, animated } from "react-spring";
 import { Link as Scroll } from "react-scroll";
 import BurgerMenu from "@/components/company/BurgerMenu";
 import Members from "@/contents/members.json";
-import { MembersType } from "@/types";
 import Link from "next/link";
 
 const Company: NextPage = () => {

@@ -3,3 +3,30 @@
 @import "tailwindcss/utilities";
 
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New:wght@300;500;700&display=swap");
+
+.batsu {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 1rem;
+  right: 1rem;
+}
+ 
+.batsu::before, .batsu::after { /* 共通設定 */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px; /* 棒の幅（太さ） */
+  height: 40px; /* 棒の高さ */
+  background: #320046;
+}
+ 
+.batsu::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+ 
+.batsu::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
