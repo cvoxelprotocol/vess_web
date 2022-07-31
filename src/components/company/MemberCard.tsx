@@ -23,13 +23,13 @@ const MemberCard: FC<MemberType> = ({
     <div className="flex flex-none flex-col justify-between mx-8 pt-8 pb-6 px-5 w-72 h-96 rounded-3xl border border-outline bg-primary/5 ">
       <div className="flex flex-col items-center  h-96 ">
         {src ? (
-          <div className="relative w-16, h-16 rounded-full">
+          <div className="relative w-16 h-16 rounded-full overflow-hidden">
             <Image src={src} layout="fill" objectFit="cover" />
           </div>
         ) : (
           <div className="w-16 h-16 rounded-full bg-slate-300"></div>
         )}
-        <h4 className=" mt-4 font-normal text-2xl text-on-primary-container">
+        <h4 className=" mt-2 font-normal text-2xl text-on-primary-container">
           {name}
         </h4>
         <div className="mt-1 flex">
@@ -45,21 +45,27 @@ const MemberCard: FC<MemberType> = ({
         </div>
       </div>
       <div className="flex items-center">
-        <div className="mx-2">
-          <a href={twitterURL}>
-            <Image src="/icons/twitter.svg" width="20px" height="24px" />
-          </a>
-        </div>
-        <div className="mx-2">
-          <a href={githubURL}>
-            <Image src="/icons/github.svg" width="24px" height="24px" />
-          </a>
-        </div>
-        <div className="mx-2">
-          <a href={vessURL}>
-            <Image src="/icons/vess.svg" width="24px" height="26px" />
-          </a>
-        </div>
+        {twitterURL && (
+          <div className="mx-2">
+            <a href={twitterURL}>
+              <Image src="/icons/twitter.svg" width="24px" height="29px" />
+            </a>
+          </div>
+        )}
+        {githubURL && (
+          <div className="mx-2">
+            <a href={githubURL}>
+              <Image src="/icons/github.svg" width="24px" height="24px" />
+            </a>
+          </div>
+        )}
+        {vessURL && (
+          <div className="mx-2">
+            <a href={vessURL}>
+              <Image src="/icons/vess.svg" width="24px" height="26px" />
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

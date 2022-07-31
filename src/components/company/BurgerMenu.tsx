@@ -68,10 +68,9 @@ const BurgerMenu: FC<BurgerProps> = (props) => {
         {" "}
         Members{" "}
       </Scroll>
-      <Scroll to="contact" smooth={true} duration={400} offset={-100}>
-        {" "}
+      <a href="mailto:info@vess.id" target="_blank" rel="noopener noreferrer">
         Contacts{" "}
-      </Scroll>
+      </a>
     </Menu>
   );
 };

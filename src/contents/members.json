@@ -2,39 +2,40 @@
   "members":[
     {
       "name": "Kantaro Fujimori",
-      "src": "",
-      "roles": ["Co-founder", "CEO"],
-      "description": "sample text",
-      "githubURL": "https://github.com/KoukiMinamoto",
-      "twitterURL": "https://twitter.com/KoukiMinamoto",
+      "src": "/pics/fujimori.png",
+      "roles": ["Founder", "CEO"],
+      "description": "Ex-",
+      "githubURL": "https://github.com/kitakaze-kan",
+      "twitterURL": "https://twitter.com/0xKantaro",
       "vessURL": "https://vess.id"
     },
     {
       "name": "Kouki Minamoto",
-      "src": "",
-      "roles": ["Co-founder", "CDO"],
-      "description": "sample text",
-      "githubURL": "https://github.com/KoukiMinamoto",
-      "twitterURL": "https://twitter.com/KoukiMinamoto",
-      "vessURL": "https://vess.id"
-    },
-    {
-      "name": "Kelivn Au",
-      "src": "",
-      "roles": ["Media Strategist"],
-      "description": "sample text",
+      "src": "/pics/minamoto.png",
+      "roles": ["Founder", "CDO"],
+      "description": "I have worked in Roland Co. as Embedded Engineer. And a founder of GOTCHA-GOTCHA Design.",
       "githubURL": "https://github.com/KoukiMinamoto",
       "twitterURL": "https://twitter.com/KoukiMinamoto",
       "vessURL": "https://vess.id"
     },
     {
       "name": "Ibuki Nakajima",
-      "src": "",
+      "src": "/pics/nakajima.jpeg",
       "roles": ["Full-stack Engineer"],
       "description": "sample text",
-      "githubURL": "https://github.com/KoukiMinamoto",
+      "githubURL": "https://github.com/hourglasshoro",
+      "twitterURL": "https://twitter.com/hourglasshoro",
+      "vessURL": "https://vess.id"
+    },
+    {
+      "name": "Kelivn Au",
+      "src": "/pics/kelivn.png",
+      "roles": ["Media Strategist"],
+      "description": "sample text",
+      "githubURL": "",
       "twitterURL": "https://twitter.com/KoukiMinamoto",
       "vessURL": "https://vess.id"
     }
+    
   ]
 }
