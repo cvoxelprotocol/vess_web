@@ -21,7 +21,7 @@
     {
       "name": "Ibuki Nakajima",
       "src": "/pics/nakajima.jpeg",
-      "roles": ["Full-stack Engineer"],
+      "roles": ["Lead Engineer"],
       "description": "sample text",
       "githubURL": "https://github.com/hourglasshoro",
       "twitterURL": "https://twitter.com/hourglasshoro",
@@ -30,7 +30,7 @@
     {
       "name": "Kelivn Au",
       "src": "/pics/kelivn.png",
-      "roles": ["Media Strategist"],
+      "roles": ["BizDev", "Marketer"],
       "description": "sample text",
       "githubURL": "",
       "twitterURL": "https://twitter.com/KoukiMinamoto",
