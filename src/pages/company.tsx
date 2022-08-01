@@ -16,12 +16,12 @@ const Company: NextPage = () => {
   const [preScrollPos, setPreScrollPos] = useState(0);
   const [isScrollDown, setIsScrollDown] = useState(true);
   const headerStyle = useRef(
-    "z-40 w-[1024px] py-3 fixed grid grid-cols-2 bg-white backdrop-blur-lg"
+    "text-center w-full py-3 fixed bg-white backdrop-blur-lg"
   );
   const burgerStyle = useRef("z-50 md:hidden");
 
   useEffect(() => {
-    membersDiv.current!.scrollTo(200, 0);
+    // membersDiv.current!.scrollTo(200, 0);
     //console.log(Members.members);
   }, []);
 
@@ -48,11 +48,11 @@ const Company: NextPage = () => {
   useEffect(() => {
     if (isScrollDown) {
       headerStyle.current =
-        "z-40 max-w-[1024px] w-full py-3  pl-0 pr-0 lg:px-0 fixed grid grid-cols-2 bg-white/80 backdrop-blur-lg transition md:-translate-y-20 duration-500 delay-300";
+        "z-40 text-center w-full py-3 px-0 fixed bg-white/80 backdrop-blur-lg transition md:-translate-y-20 duration-500 delay-300";
       burgerStyle.current = "z-50 md:hidden";
     } else {
       headerStyle.current =
-        "z-40 max-w-[1024px] w-full py-3  pl-0 pr-0 lg:px-0 fixed grid grid-cols-2 bg-white/80 backdrop-blur-lg transition duration-300 ";
+        "z-40 text-center w-full py-3 px-0 fixed bg-white/80 backdrop-blur-lg transition duration-300 ";
       burgerStyle.current = "z-50 md:hidden";
     }
   }, [isScrollDown]);
@@ -63,14 +63,14 @@ const Company: NextPage = () => {
   }, [scrollEvent]);
 
   return (
-    <div className="flex justify-center" id="outer-container bg-on-primary">
+    <div className="flex justify-center w-full" id="outer-container">
       <Head>
         <title>VESS Labs</title>
         <link rel="icon" href="/icons/VESS_favicon.ico" />
         <meta name="description" content="VESS Landing Page" />
       </Head>
 
-      <div className="max-w-[1024px] w-full  bg-on-primary">
+      <div className="w-full mx-auto bg-on-primary">
         {/* Header */}
         <div className={burgerStyle.current}>
           <BurgerMenu
@@ -80,43 +80,43 @@ const Company: NextPage = () => {
             width={280}
           />
         </div>
-
         <header className={headerStyle.current}>
-          <div className="flex items-center content-center mx-5">
-            <Image
-              src="/vesslabs_logo_full@2x.png"
-              alt="logo of VESS Labs"
-              width="148px"
-              height="30px"
-            />
+          <div className="w-full max-w-[1024px] grid grid-cols-2 mx-auto">
+            <div className="flex items-center content-center mx-5">
+              <Link href={"/"}>
+                <Image
+                  className="cursor-pointer"
+                  src="/vesslabs_logo_full@2x.png"
+                  alt="logo of VESS Labs"
+                  width="148px"
+                  height="30px"
+                />
+              </Link>
+            </div>
+            <nav className="hidden md:flex justify-end content-center lg:pr-0 pr-5 font-normal text-xl text-on-primary-container">
+              <Button variant="text">
+                <Scroll to="product" smooth={true} duration={400} offset={-100}>
+                  {" "}
+                  Product{" "}
+                </Scroll>
+              </Button>
+              {/* <Button variant="text">
+                <Scroll to="members" smooth={true} duration={400} offset={-100}>
+                  {" "}
+                  Members{" "}
+                </Scroll>
+              </Button> */}
+              <Button variant="text">
+              <Scroll to="contact" smooth={true} duration={400} offset={-100}>
+                  {" "}
+                  Contact{" "}
+                </Scroll>
+              </Button>
+            </nav>
           </div>
-          <nav className="hidden md:flex justify-end content-center lg:pr-0 pr-5 font-normal text-xl text-on-primary-container">
-            <Button variant="text">
-              <Scroll to="product" smooth={true} duration={400} offset={-100}>
-                {" "}
-                Product{" "}
-              </Scroll>
-            </Button>
-            <Button variant="text">
-              <Scroll to="members" smooth={true} duration={400} offset={-100}>
-                {" "}
-                Members{" "}
-              </Scroll>
-            </Button>
-            <Button variant="text">
-              <a
-                href="mailto:info@vess.id"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                Contact{" "}
-              </a>
-            </Button>
-          </nav>
         </header>
 
-        <main className="lg:px-0 px-5 " id="page-wrap">
+        <main className="lg:px-0 px-5 max-w-[1024px] mx-auto" id="page-wrap">
           {/* Top Image */}
           <div className="flex md:flex-row flex-col items-center justify-center md:justify-between mb-0 md:my-24 h-screen md:h-[720px]">
             <div className="relative pt-20 md:pt-0 z-30 md:w-[576px]">
@@ -219,7 +219,7 @@ const Company: NextPage = () => {
           </div>
 
           {/* Members */}
-          <div
+          {/* <div
             className="flex mt-32 mb-14 md:mt-32 md:mb-20 w-full items-center justify-end"
             id="members"
           >
@@ -240,7 +240,7 @@ const Company: NextPage = () => {
             {Members.members.map((member) => (
               <MemberCard {...member} />
             ))}
-          </div>
+          </div> */}
 
           {/* Contact */}
           <div className="flex flex-col items-center mt-32 mb-8 " id="contact">
@@ -282,20 +282,10 @@ const Company: NextPage = () => {
                   </td>
                   <td className="pb-1 pt-4 px-4 md:px-8">
                     代表取締役社長
-                    <br /> 藤森侃太郎
+                    <br /> 藤森 侃太郎
                   </td>
                   <td className="hidden md:table-cell pb-1 pt-4 px-4 md:px-8">
                     CEO Kantaro Fujimori
-                  </td>
-                </tr>
-                <tr className="border-b border-outline">
-                  <td className="pb-1 pt-4 px-4 md:px-8 font-bold">
-                    {" "}
-                    Capital{" "}
-                  </td>
-                  <td className="pb-1 pt-4 px-4 md:px-8">1200万円</td>
-                  <td className="hidden md:table-cell pb-1 pt-4 px-4 md:px-8">
-                    12 million yen
                   </td>
                 </tr>
                 <tr className="border-b border-outline">
@@ -311,11 +301,28 @@ const Company: NextPage = () => {
                   </td>
                 </tr>
                 <tr className="border-b border-outline">
-                  <td className="pb-1 pt-4 px-4 md:px-8 font-bold"> E-mail </td>
-                  <td className="pb-1 pt-4 px-4 md:px-8">info@vess.id</td>
-                  <td className="hidden md:table-cell pb-1 pt-4 px-4 md:px-8">
-                    info@vess.id
+                  <td className="pb-1 pt-4 px-4 md:px-8 font-bold">
+                    {" "}
+                    Established in{" "}
                   </td>
+                  <td className="pb-1 pt-4 px-4 md:px-8">2021年10月</td>
+                  <td className="hidden md:table-cell pb-1 pt-4 px-4 md:px-8">
+                    October 2021
+                  </td>
+                </tr>
+                <tr className="border-b border-outline">
+                  <td className="pb-1 pt-4 px-4 md:px-8 font-bold">
+                    {" "}
+                    Capital{" "}
+                  </td>
+                  <td className="pb-1 pt-4 px-4 md:px-8">12,000,000円</td>
+                  <td className="hidden md:table-cell pb-1 pt-4 px-4 md:px-8">
+                    12 million yen
+                  </td>
+                </tr>
+                <tr className="border-b border-outline">
+                  <td className="pb-1 pt-4 px-4 md:px-8 font-bold"> E-mail </td>
+                  <td className="pb-1 pt-4 px-4 md:pl-0 md:text-center" colSpan={2}>info@vess.id</td>
                 </tr>
               </tbody>
             </table>
@@ -332,8 +339,9 @@ const Company: NextPage = () => {
             </div>
           </div>
 
-          {/* Footer */}
-          <footer className="flex px-10 h-14 md:h-28 bg-primary/5 items-center justify-between text-on-primary-container">
+        </main>
+        {/* Footer */}
+        <footer className="flex px-10 h-14 md:h-28 bg-primary/5 items-center justify-between text-on-primary-container">
             <div className="hidden md:block">
               <Image
                 src="/vesslabs_logo_full@2x.png"
@@ -350,7 +358,6 @@ const Company: NextPage = () => {
             </div>
             <div className="text-xs md:text-sm">©️2022 VESS Labs Inc.</div>
           </footer>
-        </main>
       </div>
     </div>
   );

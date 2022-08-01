@@ -21,7 +21,7 @@ const Footer: FC<LinksType> = ({ links }) => {
             <ul className=" my-1 ml-2 px-2 pb-1 border-l border-on-primary font-light text-base">
               {link["listItems"].map((item) => (
                 <li className="my-1">
-                  <a href={item["href"]}> {item["label"]} </a>
+                  <a href={item["href"]} target="_blank"> {item["label"]} </a>
                 </li>
               ))}
             </ul>

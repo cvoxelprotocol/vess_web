@@ -1,24 +1,16 @@
 {
   "links":[
-    {
-      "title": "Ecosystem",
-      "listItems": [
-        {
-          "label": "Being developed",
-          "href": ""
-        }
-      ]
-    },
+   
     {
       "title": "Community",
       "listItems": [
         {
           "label": "Discord",
-          "href": ""
+          "href": "https://discord.gg/gvkDnTNHJQ"
         },
         {
           "label": "Twitter",
-          "href": ""
+          "href": "https://twitter.com/vess_id"
         }
       ]
     },
@@ -27,15 +19,15 @@
       "listItems": [
         {
           "label": "Whitepaper",
-          "href": ""
+          "href": "https://docs.cvoxel.xyz/"
         },
         {
           "label": "Github",
-          "href": ""
+          "href": "https://github.com/cvoxelprotocol"
         },
         {
           "label": "Company",
-          "href": ""
+          "href": "/company"
         }
       ]
     }

@@ -64,13 +64,14 @@ const BurgerMenu: FC<BurgerProps> = (props) => {
         {" "}
         Product{" "}
       </Scroll>
-      <Scroll to="members" smooth={true} duration={400} offset={-100}>
+      {/* <Scroll to="members" smooth={true} duration={400} offset={-100}>
         {" "}
         Members{" "}
+      </Scroll> */}
+      <Scroll to="contact" smooth={true} duration={400} offset={-100}>
+        {" "}
+        Contract{" "}
       </Scroll>
-      <a href="mailto:info@vess.id" target="_blank" rel="noopener noreferrer">
-        Contacts{" "}
-      </a>
     </Menu>
   );
 };

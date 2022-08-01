@@ -75,7 +75,7 @@ const Home: NextPage = () => {
                     </h6>
                     <a className="block mt-2 py-2 px-2 text-base lg:text-lg text-primary ">
                       {" "}
-                      ▶︎ Learn More{" "}
+                      {/* ▶︎ Learn More{" "} */}
                     </a>
                   </div>
                   <div className="relative mt-5 h-40 md:h-auto w-full md:translate-x-20">
@@ -99,7 +99,7 @@ const Home: NextPage = () => {
                   </h6>
                   <a className="block mt-2 py-2 px-2 text-base lg:text-lg text-primary ">
                     {" "}
-                    ▶︎ Learn More{" "}
+                    {/* ▶︎ Learn More{" "} */}
                   </a>
                 </BenefitCard>
                 <BenefitCard className="py-10 px-8 col-span-1 raw-span-1">
@@ -114,7 +114,7 @@ const Home: NextPage = () => {
                   </h6>
                   <a className="block mt-2 py-2 px-2 text-base lg:text-lg text-primary ">
                     {" "}
-                    ▶︎ Learn More{" "}
+                    {/* ▶︎ Learn More{" "} */}
                   </a>
                 </BenefitCard>
               </>
@@ -131,7 +131,7 @@ const Home: NextPage = () => {
             Join us
           </h4>
           <div className="flex justify-center md:justify-between items-center mt-12 w-full max-w-5xl">
-            <a className="block mx-6 md:mx-12 w-20 h-24">
+            <a className="block mx-6 md:mx-12 w-20 h-24" href="https://github.com/cvoxelprotocol" target={"_blank"}>
               <div className="hidden md:block">
                 <Image src="/icons/github.svg" width="80px" height="80px" />
                 <h6 className="mx-2 font-medium text-lg text-on-primary-container text-center ">
@@ -145,7 +145,7 @@ const Home: NextPage = () => {
                 </h6>
               </div>
             </a>
-            <a className="block mx-2 md:mx-12 w-20 h-24">
+            <a className="block mx-2 md:mx-12 w-20 h-24" href="https://discord.gg/gvkDnTNHJQ" target={"_blank"}>
               <div className="hidden md:block">
                 <Image src="/icons/discord.svg" width="80px" height="80px" />
                 <h6 className="mx-2 font-medium text-lg text-on-primary-container text-center ">
@@ -159,7 +159,7 @@ const Home: NextPage = () => {
                 </h6>
               </div>
             </a>
-            <a className="block mx-6 md:mx-12 w-20 h-24">
+            <a className="block mx-6 md:mx-12 w-20 h-24" href="https://twitter.com/vess_id" target={"_blank"}>
               <div className="hidden md:block">
                 <Image src="/icons/twitter.svg" width="80px" height="80px" />
                 <h6 className="mx-2 font-medium text-lg text-on-primary-container text-center ">
