@@ -20,6 +20,14 @@ const Company: NextPage = () => {
   );
   const burgerStyle = useRef("z-50 md:hidden");
 
+  const title = "VESS Labs";
+  const description =
+    "VESS is a decentralized self-sovereign work credentials protocol that everyone can stack their work credentials and shape their work identities.";
+  const url = "";
+  const imgUrl = "https://vess.id/ogp.png";
+  const imgWidth = 1200;
+  const imgHeight = 630;
+
   useEffect(() => {
     // membersDiv.current!.scrollTo(200, 0);
     //console.log(Members.members);
@@ -66,8 +74,43 @@ const Company: NextPage = () => {
     <div className="flex justify-center w-full" id="outer-container">
       <Head>
         <title>VESS Labs</title>
-        <link rel="icon" href="/icons/VESS_favicon.ico" />
-        <meta name="description" content="VESS Landing Page" />
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1.0"
+          key="viewport"
+        />
+        <link
+          rel="icon"
+          href="/icons/VESSLabs_favicon.svg"
+          type="image/svg+xml"
+        />
+        <meta name="description" content="VESS Labs Company Page" />
+        <meta property="og:url" content={url} key="ogurl" />
+        <meta property="og:title" content={title} key="ogtitle" />
+        <meta property="og:site_name" content={title} key="ogsite_name" />
+        <meta
+          property="og:description"
+          content={description}
+          key="ogdescription"
+        />
+        <meta property="og:type" content="website" key="ogtype" />
+        <meta property="og:image" content={imgUrl} key="ogimage" />
+        <meta
+          property="og:image:width"
+          content={String(imgWidth)}
+          key="ogimagewidth"
+        />
+        <meta
+          property="og:image:height"
+          content={String(imgHeight)}
+          key="ogimageheight"
+        />
+        <link rel="canonical" href={url} key="canonical" />
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+          key="twittercard"
+        />
       </Head>
 
       <div className="w-full mx-auto bg-on-primary">
@@ -100,14 +143,14 @@ const Company: NextPage = () => {
                   Product{" "}
                 </Scroll>
               </Button>
-              {/* <Button variant="text">
+              <Button variant="text">
                 <Scroll to="members" smooth={true} duration={400} offset={-100}>
                   {" "}
                   Members{" "}
                 </Scroll>
-              </Button> */}
+              </Button>
               <Button variant="text">
-              <Scroll to="contact" smooth={true} duration={400} offset={-100}>
+                <Scroll to="contact" smooth={true} duration={400} offset={-100}>
                   {" "}
                   Contact{" "}
                 </Scroll>
@@ -213,13 +256,13 @@ const Company: NextPage = () => {
                 colorful voxels as your CV.
               </div>
               <Button variant="contained">
-                <Link href="/">Go to App</Link>
+                <a href="https://app.vess.id">Go to App</a>
               </Button>
             </div>
           </div>
 
           {/* Members */}
-          {/* <div
+          <div
             className="flex mt-32 mb-14 md:mt-32 md:mb-20 w-full items-center justify-end"
             id="members"
           >
@@ -236,11 +279,16 @@ const Company: NextPage = () => {
             </div>
           </div>
 
-          <div className="flex overflow-scroll" ref={membersDiv}>
-            {Members.members.map((member) => (
-              <MemberCard {...member} />
-            ))}
-          </div> */}
+          <div className="flex justify-center">
+            <div
+              className="grid md:grid-cols-2 gap-10 justify-items-center max-w-[720px]"
+              ref={membersDiv}
+            >
+              {Members.members.map((member) => (
+                <MemberCard {...member} />
+              ))}
+            </div>
+          </div>
 
           {/* Contact */}
           <div className="flex flex-col items-center mt-32 mb-8 " id="contact">
@@ -264,8 +312,8 @@ const Company: NextPage = () => {
               <thead className="hidden md:table-header-group">
                 <tr className="border-b border-outline bg-primary-container/50">
                   <th className="px-4"></th>
-                  <th className="pb-1 pt-2">日本語</th>
-                  <th>English</th>
+                  <th className="py-2 "> Japanese </th>
+                  <th className="py-2">English</th>
                 </tr>
               </thead>
               <tbody>
@@ -322,7 +370,12 @@ const Company: NextPage = () => {
                 </tr>
                 <tr className="border-b border-outline">
                   <td className="pb-1 pt-4 px-4 md:px-8 font-bold"> E-mail </td>
-                  <td className="pb-1 pt-4 px-4 md:pl-0 md:text-center" colSpan={2}>info@vess.id</td>
+                  <td
+                    className="pb-1 pt-4 px-4 md:pl-0 md:text-center"
+                    colSpan={2}
+                  >
+                    info@vess.id
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -338,26 +391,25 @@ const Company: NextPage = () => {
               </Button>
             </div>
           </div>
-
         </main>
         {/* Footer */}
         <footer className="flex px-10 h-14 md:h-28 bg-primary/5 items-center justify-between text-on-primary-container">
-            <div className="hidden md:block">
-              <Image
-                src="/vesslabs_logo_full@2x.png"
-                width="148px"
-                height="30px"
-              />
-            </div>
-            <div className="md:hidden block">
-              <Image
-                src="/vesslabs_logo_full@2x.png"
-                width="74px"
-                height="15px"
-              />
-            </div>
-            <div className="text-xs md:text-sm">©️2022 VESS Labs Inc.</div>
-          </footer>
+          <div className="hidden md:block">
+            <Image
+              src="/vesslabs_logo_full@2x.png"
+              width="148px"
+              height="30px"
+            />
+          </div>
+          <div className="md:hidden block">
+            <Image
+              src="/vesslabs_logo_full@2x.png"
+              width="74px"
+              height="15px"
+            />
+          </div>
+          <div className="text-xs md:text-sm">©️2022 VESS Labs Inc.</div>
+        </footer>
       </div>
     </div>
   );

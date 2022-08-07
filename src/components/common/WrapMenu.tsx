@@ -70,9 +70,9 @@ const WrapMenu: FC<Props> = ({ width, links }) => {
             </ul>
           </div>
         ))}
-        <Button size="full">
-          <a>Go to App</a>
-        </Button>
+        <a href="https://app.vess.id">
+          <Button size="full">Go to App</Button>
+        </a>
       </div>
       <button
         className=" flex flex-col justify-between items-center w-8 h-8"

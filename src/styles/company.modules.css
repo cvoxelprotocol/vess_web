@@ -1,0 +1,9 @@
+.cls-1 {
+  fill: #212121; <!-- ライトモード時のカラー -->
+}
+
+@media (prefers-color-scheme: dark) {
+  .cls-1 {
+    fill: white; <!-- ダークモード時のカラー -->
+  }
+}

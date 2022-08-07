@@ -16,6 +16,7 @@ module.exports = {
         "primary-container": "#FBD7FF",
         "on-primary": "#FFFFFF",
         "on-primary-container": "#320046",
+        "on-primary-container/dark": "#FBD7FF",
         "background": "#FCFCFC",
         "on-background": "#1E1A1E",
         "primary/depth1": "#58468A",
@@ -23,7 +24,12 @@ module.exports = {
         "outline": "#7E747E",
         "skyblue": "#6FD2FD",
         "oceanblue": "#8E92F3",
-        "waterpurple": "#CA8AFF"
+        "waterpurple": "#CA8AFF",
+        "sunset": "#FF9F8A",
+        "yamabuki": "#F3DD8E",
+        "lightgreen": "#BEFD6F",
+        "emerald": "#6FFDB9",
+        
 
       }
     },

@@ -36,7 +36,11 @@ const Header: FC<LinksType> = ({ links }) => {
                         {item.label}
                       </a>
                     ) : (
-                      <a className="hover:bg-transparent py-2" href={item["href"]} target="_blank">
+                      <a
+                        className="hover:bg-transparent py-2"
+                        href={item["href"]}
+                        target="_blank"
+                      >
                         {" "}
                         {item.label}{" "}
                       </a>
@@ -47,7 +51,7 @@ const Header: FC<LinksType> = ({ links }) => {
             </div>
           ))}
           <div className="w-4"></div>
-          <a href="https://testnet.cvoxel.xyz/" target={"_blank"} >
+          <a href="https://app.vess.id" target={"_blank"}>
             <Button> Go to App </Button>
           </a>
         </div>

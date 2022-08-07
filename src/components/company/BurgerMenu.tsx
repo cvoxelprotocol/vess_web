@@ -64,10 +64,10 @@ const BurgerMenu: FC<BurgerProps> = (props) => {
         {" "}
         Product{" "}
       </Scroll>
-      {/* <Scroll to="members" smooth={true} duration={400} offset={-100}>
+      <Scroll to="members" smooth={true} duration={400} offset={-100}>
         {" "}
         Members{" "}
-      </Scroll> */}
+      </Scroll>
       <Scroll to="contact" smooth={true} duration={400} offset={-100}>
         {" "}
         Contract{" "}

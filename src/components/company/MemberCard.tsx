@@ -20,8 +20,8 @@ const MemberCard: FC<MemberType> = ({
   vessURL,
 }) => {
   return (
-    <div className="flex flex-none flex-col justify-between mx-8 pt-8 pb-6 px-5 w-72 h-96 rounded-3xl border border-outline bg-primary/5 ">
-      <div className="flex flex-col items-center  h-96 ">
+    <div className="flex flex-none flex-col pt-8 pb-6 px-5 w-72 h-auto rounded-3xl border border-outline bg-primary/5 ">
+      <div className="flex flex-col items-center  h-fit ">
         {src ? (
           <div className="relative w-16 h-16 rounded-full overflow-hidden">
             <Image src={src} layout="fill" objectFit="cover" />
@@ -40,11 +40,11 @@ const MemberCard: FC<MemberType> = ({
             </div>
           ))}
         </div>
-        <div className="w-full mt-4 px-1 py-3 border-t border-outline text-on-primary-container">
+        {/* <div className="w-full mt-4 px-1 py-3 border-t border-outline text-on-primary-container">
           {description}
-        </div>
+        </div> */}
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center justify-center mt-4">
         {twitterURL && (
           <div className="mx-2">
             <a href={twitterURL}>
