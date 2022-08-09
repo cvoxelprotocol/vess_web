@@ -3,13 +3,13 @@ import MemberCard from "@/components/company/MemberCard";
 import { NextPage } from "next";
 import Image from "next/image";
 import { useEffect, useState, useCallback, useRef } from "react";
-import { useSpring, config, animated } from "react-spring";
 import { Link as Scroll } from "react-scroll";
 import BurgerMenu from "@/components/company/BurgerMenu";
 import Members from "@/contents/members.json";
 import Link from "next/link";
 import VessLine from "@/components/common/VessLine";
 import Head from "next/head";
+// import { useSpring, config } from "react-spring";
 
 const Company: NextPage = () => {
   const membersDiv = useRef<HTMLDivElement>(null);
@@ -28,16 +28,11 @@ const Company: NextPage = () => {
   const imgWidth = 1200;
   const imgHeight = 630;
 
-  useEffect(() => {
-    // membersDiv.current!.scrollTo(200, 0);
-    //console.log(Members.members);
-  }, []);
-
-  const { opacity, y } = useSpring({
-    from: { opacity: 0, y: 100 },
-    to: { opacity: 1, y: 0 },
-    config: config.molasses,
-  });
+  // const { opacity, y } = useSpring({
+  //   from: { opacity: 0, y: 100 },
+  //   to: { opacity: 1, y: 0 },
+  //   config: config.molasses,
+  // });
 
   const scrollEvent = useCallback(() => {
     if (typeof window !== "undefined") {
@@ -175,8 +170,8 @@ const Company: NextPage = () => {
               <div className="mr-5 mt-4 font-normal text-lg md:text-xl text-on-primary-container ">
                 <VessLine className="w-full h-[6px]" />
                 <div className="py-2 px-4">
-                  VESS Labs is a company that is developing identity protocols
-                  and services. Let’s take our identities back.
+                  VESS Labs develops identity visualization protocols and work credentials databases. 
+                  Let's take our identities back.
                 </div>
               </div>
             </div>
@@ -285,7 +280,7 @@ const Company: NextPage = () => {
               ref={membersDiv}
             >
               {Members.members.map((member) => (
-                <MemberCard {...member} />
+                <MemberCard {...member} key={member.name}/>
               ))}
             </div>
           </div>
@@ -356,16 +351,6 @@ const Company: NextPage = () => {
                   <td className="pb-1 pt-4 px-4 md:px-8">2021年10月</td>
                   <td className="hidden md:table-cell pb-1 pt-4 px-4 md:px-8">
                     October 2021
-                  </td>
-                </tr>
-                <tr className="border-b border-outline">
-                  <td className="pb-1 pt-4 px-4 md:px-8 font-bold">
-                    {" "}
-                    Capital{" "}
-                  </td>
-                  <td className="pb-1 pt-4 px-4 md:px-8">12,000,000円</td>
-                  <td className="hidden md:table-cell pb-1 pt-4 px-4 md:px-8">
-                    12 million yen
                   </td>
                 </tr>
                 <tr className="border-b border-outline">
