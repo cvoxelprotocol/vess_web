@@ -5,7 +5,6 @@ import * as THREE from "three";
 
 const Sea: FC = () => {
   const [frameNum, setFrameNum] = useState(0);
-  const gradPoint = useRef<THREE.Texture>(null);
   const textureProps = useTexture({
     map: "/textures/wave.png",
     alphaMap: "/textures/wave_alpha.png",
@@ -39,7 +38,6 @@ const Sea: FC = () => {
         <planeBufferGeometry />
         <meshPhongMaterial reflectivity={0}>
           <GradientTexture
-            ref={gradPoint}
             stops={[0, 0.5 + 0.3 * Math.sin(0.007 * frameNum), 1]} // As many stops as you want
             colors={["#6FD2FD", "#8E92F3", "#CA8AFF"]} // Colors need to match the number of stops
             size={1024} // Size is optional, default = 1024

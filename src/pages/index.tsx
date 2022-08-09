@@ -5,7 +5,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/layout/Header";
 import { Suspense, useState } from "react";
-import Button from "@/components/common/Button";
 import Image from "next/image";
 import BenefitCard from "@/components/common/BenefitCard";
 import { useInView } from "react-intersection-observer";
