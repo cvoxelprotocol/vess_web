@@ -8,8 +8,6 @@ type Props = {
 const TextTransition: FC<Props> = ({ children }) => {
   const [index, setIndex] = useState(0);
   const items = Children.toArray(children);
-  console.log(items.length);
-  console.log("index: " + index);
   const trans = useTransition(index, {
     key: index,
     from: { opacity: 0, y: 50 },
