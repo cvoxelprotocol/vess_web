@@ -34,7 +34,7 @@ const MemberCard: FC<MemberType> = ({
         </h4>
         <div className="mt-1 flex">
           {roles.map((role) => (
-            <div className="mx-1 px-2 py-[2px] border border-primary bg-primary-container rounded-full text-xs ">
+            <div className="mx-1 px-2 py-[2px] border border-primary bg-primary-container rounded-full text-xs " key={role}>
               {" "}
               {role}{" "}
             </div>

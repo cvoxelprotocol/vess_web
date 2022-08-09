@@ -51,18 +51,18 @@ const WrapMenu: FC<Props> = ({ width, links }) => {
           onClick={crossClicked}
         ></button>
         {links.map((link) => (
-          <div className="mb-6">
+          <div className="mb-6" key={link.title}>
             <h6 className="pb-2 font-medium text-sm text-outline border-b border-outline">
               {link.title.toUpperCase()}
             </h6>
             <ul className="mt-1 text-lg text-on-primary-container">
               {link.listItems.map((item) =>
                 item.href == "" ? (
-                  <li className="py-1 text-on-primary-container/50">
+                  <li className="py-1 text-on-primary-container/50" key={item.href}>
                     <a href={item.href}>{item.label}</a>
                   </li>
                 ) : (
-                  <li className="py-1">
+                  <li className="py-1" key={item.href}>
                     <a href={item.href}>{item.label}</a>
                   </li>
                 )

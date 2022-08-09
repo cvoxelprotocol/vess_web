@@ -22,7 +22,7 @@ const Header: FC<LinksType> = ({ links }) => {
         </div>
         <div className="hidden lg:flex justify-self-end items-center col-span-2">
           {links.map((link) => (
-            <div className=" dropdown dropdown-hover">
+            <div className=" dropdown dropdown-hover" key={link.title}>
               <Button variant="text">{link.title} ▼</Button>
               <ul
                 tabIndex={0}
@@ -30,7 +30,7 @@ const Header: FC<LinksType> = ({ links }) => {
                 style={{ boxShadow: "0 2px 1px 0 rgb(175 169 173 / 1)" }}
               >
                 {link.listItems.map((item) => (
-                  <li className="rounded-none mx-2 my-1 hover:border-b-[1.5px] hover:bg-transparent border-primary/50">
+                  <li className="rounded-none mx-2 my-1 hover:border-b-[1.5px] hover:bg-transparent border-primary/50" key={item.href}>
                     {item.href == "" ? (
                       <a className="hover:bg-transparent py-2 text-on-primary-container/50">
                         {item.label}

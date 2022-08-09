@@ -16,11 +16,11 @@ const Footer: FC<LinksType> = ({ links }) => {
       </div>
       <div className="flex justify-start flex-wrap lg:justify-end my-4 lg:my-0 font-normal text-lg text-on-primary">
         {links.map((link) => (
-          <div className="mb-3 lg:mb-0 mx-8 ">
+          <div className="mb-3 lg:mb-0 mx-8 " key={link.title}>
             {link["title"]}
             <ul className=" my-1 ml-2 px-2 pb-1 border-l border-on-primary font-light text-base">
               {link["listItems"].map((item) => (
-                <li className="my-1">
+                <li className="my-1" key={item.href}>
                   <a href={item["href"]} target="_blank"> {item["label"]} </a>
                 </li>
               ))}
