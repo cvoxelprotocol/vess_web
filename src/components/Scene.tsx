@@ -102,13 +102,13 @@ const Scene: FC<Props> = ({ setter }) => {
               </div>
             </Html>
           )}
-          <Html position={[0, -12, 0]} center zIndexRange={[0, 0]}>
+          {/* <Html position={[0, -12, 0]} center zIndexRange={[0, 0]}>
             <div className="sm:hidden w-[240px] relative text-center">
               <a className="w-full" href="https://app.vess.id" target={"_blank"}>
                 <Button> Go to App </Button>
               </a>
-          </div>
-          </Html>
+            </div>
+          </Html> */}
         </group>
       </perspectiveCamera>
     </>
