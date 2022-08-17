@@ -88,7 +88,7 @@ const Scene: FC<Props> = ({ setter }) => {
             </div>
           </Html>
           {!v2 && (
-            <Html position={[-0, 10, 0]} center>
+            <Html position={[-0, 10, 0]} center zIndexRange={[0, 0]}>
               <div className="flex items-center justify-end w-screen ">
                 <TextTransition>
                   <h1 className="text-[48px] text-on-primary-container font-sans-alt font-light">
@@ -102,8 +102,8 @@ const Scene: FC<Props> = ({ setter }) => {
               </div>
             </Html>
           )}
-          <Html position={[0, -12, 0]} center zIndexRange={[0, 0]}>
-            <div className="lg:hidden w-[240px] relative text-center">
+          <Html position={[0, -12, 0]} center zIndexRange={[10, 0]}>
+            <div className="lg:hidden w-[240px] relative text-center z-30">
               <a className="w-full" href="https://app.vess.id" target={"_blank"}>
                 <Button> Go to App </Button>
               </a>
