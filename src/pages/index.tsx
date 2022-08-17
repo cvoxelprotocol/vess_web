@@ -174,7 +174,7 @@ const Home: NextPage = () => {
                       ▶︎ Learn More{" "}
                     </a>
                   </div>
-                  <div className="relative mt-5 h-40 md:h-auto w-full scale-[1.8] translate-x-20 md:translate-x-10 md:-translate-y-5">
+                  <div className="hidden lg:block relative mt-5 h-40 md:h-auto w-full scale-[1.8] translate-x-20 md:translate-x-10 md:-translate-y-5">
                     <Image
                       src="/resume_image.png"
                       layout="fill"

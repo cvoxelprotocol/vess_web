@@ -7,7 +7,7 @@ import Sea from "./model/Sea";
 import { useSpring, animated } from "react-spring";
 import TextTransition from "./model/TextTransition";
 import Sky from "./model/Sky";
-import { useRecoilState } from "recoil";
+import Button from "./common/Button";
 
 type Props = {
   setter: Dispatch<SetStateAction<boolean>>;
@@ -102,6 +102,13 @@ const Scene: FC<Props> = ({ setter }) => {
               </div>
             </Html>
           )}
+          <Html position={[0, -12, 0]} center zIndexRange={[0, 0]}>
+            <div className="sm:hidden w-[240px] relative text-center">
+              <a className="w-full" href="https://app.vess.id" target={"_blank"}>
+                <Button> Go to App </Button>
+              </a>
+          </div>
+          </Html>
         </group>
       </perspectiveCamera>
     </>
