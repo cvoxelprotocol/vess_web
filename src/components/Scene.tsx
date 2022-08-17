@@ -65,19 +65,19 @@ const Scene: FC<Props> = ({ setter }) => {
             <div className="flex relative z-10 items-center justify-center w-screen ">
               <animated.div style={p1Styles}>
                 <TextTransition>
-                  <h1 className="mx-4 text-left text-[36px] lg:text-[56px] text-on-primary-container font-sans-alt font-light">
+                  <h1 className="mx-4 text-left text-[36px] lg:text-[54px] text-on-primary-container font-sans-alt font-light">
                     Record your Soulbound <br className="md:hidden" />
                     <span className="md:ml-2 px-4 font-bold text-on-primary rounded-lg bg-primary leading-loose">
                       Work Credentials{" "}
                     </span>
                   </h1>
-                  <h1 className="mx-4 text-[36px] lg:text-[56px] text-on-primary-container font-sans-alt font-light">
+                  <h1 className="mx-4 text-[36px] lg:text-[54px] text-on-primary-container font-sans-alt font-light">
                     Share your Voxels. They're <br className="md:hidden" />
                     <span className="md:ml-2 px-4 font-bold text-on-primary rounded-lg bg-primary leading-loose">
                       Your web3 CV{" "}
                     </span>
                   </h1>
-                  <h1 className="mx-4 text-[36px] lg:text-[56px] text-on-primary-container font-sans-alt font-light">
+                  <h1 className="mx-4 text-[36px] lg:text-[54px] text-on-primary-container font-sans-alt font-light">
                     Visualize your work as <br className="md:hidden" />
                     <span className="md:ml-2 px-4 font-bold text-on-primary rounded-lg bg-primary leading-loose">
                       Colorful Voxels{" "}
@@ -102,13 +102,13 @@ const Scene: FC<Props> = ({ setter }) => {
               </div>
             </Html>
           )}
-          {/* <Html position={[0, -12, 0]} center zIndexRange={[0, 0]}>
-            <div className="sm:hidden w-[240px] relative text-center">
+          <Html position={[0, -12, 0]} center zIndexRange={[0, 0]}>
+            <div className="lg:hidden w-[240px] relative text-center">
               <a className="w-full" href="https://app.vess.id" target={"_blank"}>
                 <Button> Go to App </Button>
               </a>
             </div>
-          </Html> */}
+          </Html>
         </group>
       </perspectiveCamera>
     </>
