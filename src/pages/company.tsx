@@ -170,8 +170,8 @@ const Company: NextPage = () => {
               <div className="mr-5 mt-4 font-normal text-lg md:text-xl text-on-primary-container ">
                 <VessLine className="w-full h-[6px]" />
                 <div className="py-2 px-4">
-                  VESS Labs develops identity visualization protocols and work credentials databases. 
-                  Let's take our identities back.
+                  VESS Labs develops identity visualization protocols and work
+                  credentials databases. Let's take our identities back.
                 </div>
               </div>
             </div>
@@ -247,8 +247,8 @@ const Company: NextPage = () => {
                 VESS is a self-sovereign work credentials protocol. You can
                 attach your transfer transactions your work details such as work
                 title, description, deliverable and so on. Then, your works are
-                visualized as colorful voxels. You can easily share your
-                colorful voxels as your CV.
+                visualized as colorful VOXELs. You can easily share your
+                colorful VOXELs as your CV.
               </div>
               <Button variant="contained">
                 <a href="https://app.vess.id">Go to App</a>
@@ -280,7 +280,7 @@ const Company: NextPage = () => {
               ref={membersDiv}
             >
               {Members.members.map((member) => (
-                <MemberCard {...member} key={member.name}/>
+                <MemberCard {...member} key={member.name} />
               ))}
             </div>
           </div>

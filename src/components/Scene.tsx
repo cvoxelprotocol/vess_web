@@ -72,7 +72,7 @@ const Scene: FC<Props> = ({ setter }) => {
                     </span>
                   </h1>
                   <h1 className="mx-4 text-[36px] lg:text-[54px] text-on-primary-container font-sans-alt font-light">
-                    Share your Voxels. They're <br className="md:hidden" />
+                    Share your VOXELs. They're <br className="md:hidden" />
                     <span className="md:ml-2 px-4 font-bold text-on-primary rounded-lg bg-primary leading-loose">
                       Your web3 CV{" "}
                     </span>
@@ -80,7 +80,7 @@ const Scene: FC<Props> = ({ setter }) => {
                   <h1 className="mx-4 text-[36px] lg:text-[54px] text-on-primary-container font-sans-alt font-light">
                     Visualize your work as <br className="md:hidden" />
                     <span className="md:ml-2 px-4 font-bold text-on-primary rounded-lg bg-primary leading-loose">
-                      Colorful Voxels{" "}
+                      Colorful VOXELs{" "}
                     </span>
                   </h1>
                 </TextTransition>
@@ -104,7 +104,11 @@ const Scene: FC<Props> = ({ setter }) => {
           )}
           <Html position={[0, -12, 0]} center zIndexRange={[10, 0]}>
             <div className="lg:hidden w-[240px] relative text-center z-30">
-              <a className="w-full" href="https://app.vess.id" target={"_blank"}>
+              <a
+                className="w-full"
+                href="https://app.vess.id"
+                target={"_blank"}
+              >
                 <Button> Go to App </Button>
               </a>
             </div>

@@ -165,8 +165,8 @@ const Home: NextPage = () => {
                     </h3>
                     <VessLine className="w-full h-1" />
                     <h6 className=" mt-2 px-2 text-base lg:text-xl text-primary/depth1 leading-relaxed">
-                      Your VESS voxels are your own work history on Web. <br />
-                      You can easily share your voxels to your friends,
+                      Your VESS VOXELs are your own work history on Web. <br />
+                      You can easily share your VOXELs to your friends,
                       colleagues etc... as <strong>your CV</strong>.
                     </h6>
                     <a className="block mt-2 py-2 px-2 text-base lg:text-lg text-primary ">
