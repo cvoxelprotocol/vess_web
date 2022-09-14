@@ -1,3 +1,4 @@
+import { GA_TRACKING_ID } from "@/lib/gtag";
 import { ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Scene from "@/components/Scene";
@@ -64,6 +65,26 @@ const Home: NextPage = () => {
           content="summary_large_image"
           key="twittercard"
         />
+        {GA_TRACKING_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+        `,
+              }}
+            />
+          </>
+        )}
       </Head>
       <Header links={MenuLinks.links} />
 
