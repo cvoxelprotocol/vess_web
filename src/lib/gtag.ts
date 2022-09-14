@@ -1,5 +1,5 @@
 // lib/gtag.ts
-export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || "";
+export const GA_TRACKING_ID = "G-EEBS71KVNL";
 
 // PV 測定
 export const pageview = (url: string): void => {
