@@ -276,7 +276,7 @@ const Company: NextPage = () => {
 
           <div className="flex justify-center">
             <div
-              className="grid md:grid-cols-2 gap-10 justify-items-center max-w-[720px]"
+              className="grid grid-cols-2 md:grid-cols-3 gap-4 justify-items-center max-w-[720px]"
               ref={membersDiv}
             >
               {Members.members.map((member) => (

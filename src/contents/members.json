@@ -33,7 +33,25 @@
       "roles": ["BizDev", "Marketer"],
       "description": "sample text",
       "githubURL": "",
-      "twitterURL": "https://twitter.com/KoukiMinamoto",
+      "twitterURL": "",
+      "vessURL": "https://vess.id"
+    },
+    {
+      "name": "Irina Pchelintceva",
+      "src": "/pics/irina.jpeg",
+      "roles": ["BizDev", "US"],
+      "description": "sample text",
+      "githubURL": "",
+      "twitterURL": "https://twitter.com/IrinaBees",
+      "vessURL": "https://vess.id"
+    },
+    {
+      "name": "Kenta Kato",
+      "src": "/pics/kato.jpg",
+      "roles": ["BizDev", "Japan"],
+      "description": "sample text",
+      "githubURL": "",
+      "twitterURL": "https://twitter.com/ken012185",
       "vessURL": "https://vess.id"
     }
     

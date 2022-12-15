@@ -190,9 +190,9 @@ const Home: NextPage = () => {
                       You can easily share your VOXELs to your friends,
                       colleagues etc... as <strong>your CV</strong>.
                     </h6>
-                    <a className="block mt-2 py-2 px-2 text-base lg:text-lg text-primary ">
+                    <a className="block mt-2 py-2 px-2 text-base lg:text-lg text-primary " href="https://app.vess.id/" target={"_blank"}>
                       {" "}
-                      ▶︎ Learn More{" "}
+                      ▶︎ Go To App{" "}
                     </a>
                   </div>
                   <div className="hidden lg:block relative mt-5 h-40 md:h-auto w-full scale-[1.8] translate-x-20 md:translate-x-10 md:-translate-y-5">
@@ -205,7 +205,7 @@ const Home: NextPage = () => {
                 </BenefitCard>
                 <BenefitCard className="md:h-full md:my-0 my-6 py-10 px-8 col-span-1 raw-span-1">
                   <h3 className="mb-2 px-2 font-medium text-xl lg:text-2xl text-on-primary-container">
-                    for DAO Managers
+                    for Web3 Projects / DAOs
                   </h3>
                   <VessLine className="w-full h-1" />
                   <h6 className=" mt-2 px-2 text-base lg:text-xl text-primary/depth1 leading-relaxed">
@@ -214,7 +214,7 @@ const Home: NextPage = () => {
                     With VESS, you can list the backgrounds of your community
                     members to help you recruit them.
                   </h6>
-                  <a className="block mt-2 py-2 px-2 text-base lg:text-lg text-primary ">
+                  <a className="block mt-2 py-2 px-2 text-base lg:text-lg text-primary "  href="https://lp.vess.id/en/synapss/org/apply" target={"_blank"}>
                     {" "}
                     ▶︎ Learn More{" "}
                   </a>
@@ -229,7 +229,7 @@ const Home: NextPage = () => {
                     greater by incorporating VESS. <br />
                     VESS is working on an SDK and API development for that.
                   </h6>
-                  <a className="block mt-2 py-2 px-2 text-base lg:text-lg text-primary ">
+                  <a className="block mt-2 py-2 px-2 text-base lg:text-lg text-primary "  href="https://lp.vess.id/en/synapss/org/apply" target={"_blank"}>
                     {" "}
                     ▶︎ Learn More{" "}
                   </a>

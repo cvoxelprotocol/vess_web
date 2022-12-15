@@ -1,6 +1,5 @@
 import { FC, ReactNode } from "react";
 import Image from "next/image";
-import Members from "@/contents/members.json";
 import { MemberType } from "@/types";
 
 type Props = {
@@ -20,7 +19,7 @@ const MemberCard: FC<MemberType> = ({
   vessURL,
 }) => {
   return (
-    <div className="flex flex-none flex-col pt-8 pb-6 px-5 w-72 h-auto rounded-3xl border border-outline bg-primary/5 ">
+    <div className="flex flex-none flex-col pt-8 pb-6 px-5 w-full h-auto rounded-3xl border border-outline bg-primary/5 ">
       <div className="flex flex-col items-center  h-fit ">
         {src ? (
           <div className="relative w-16 h-16 rounded-full overflow-hidden">
